@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Outfit&display=swap');
+
+/* COMMON */
+:root {
+  --blue-dark: #05668D;
+  --blue: #006AB2;
+  --blue-light: #427AA1;
+  --gray: #EBF2FA;
+  --green: #679436;
+  --green-light: #A5BE00;
+  --black: #000;
+  --white: #fff;
+
+  --title-size: 64px;
+  --subtitle-size: 48px;
+  --sentence-size: 36px;
+  --paragraph-size: 24px;
+
+  --bold: 700;
+  --medium: 500;
+  --regular: 400;
+  --extra-light: 200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  min-height: 100vh;
+}
+
+.title {
+  color: var(--blue);
+  font-size: var(--title-size);
+  font-weight: var(--bold);
+}
+
+.subtitle {
+  color: var(--blue-dark);
+  font-size: var(--subtitle-size);
+  font-weight: var(--medium);
+}
+
+.sentence {
+  color: var(--blue-dark);
+  font-size: var(--sentence-size);
+  font-weight: var(--regular);
+}
+
+.paragraph {
+  color: var(--blue-dark);
+  font-size: var(--paragraph-size);
+  font-weight: var(--regular);
+}
+
+/* HEADER */
+.nav {
+  padding: 0 20%;
+  display: flex;
+  justify-content: space-evenly;
+  text-justify: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.nav-link {
+  padding: 0 40px;
+  text-decoration: none;
+  font-size: var(--sentence-size);
+  color: var(--blue-dark);
+}
+.nav-link:hover {
+  color: var(--green-light);
+}
+.nav-link.selected {
+  text-decoration: underline;
+  color: var(--green);
+}
+.nav-separator {
+  border-left: 1px solid var(--blue-dark);
+}
