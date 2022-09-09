@@ -15,6 +15,7 @@
   --subtitle-size: 48px;
   --sentence-size: 36px;
   --paragraph-size: 24px;
+  --text-size: 18px;
 
   --bold: 700;
   --medium: 500;
@@ -31,6 +32,9 @@
 body {
   font-family: 'Oswald', sans-serif;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .title {
@@ -56,6 +60,38 @@ body {
   font-size: var(--paragraph-size);
   font-weight: var(--regular);
 }
+
+.btn {
+  text-decoration: none;
+  font-size: var(--text-size);
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  border: 2px solid var(--green);
+  background-color: var(--green);
+  color: var(--gray);
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  background-color: var(--green-light);
+}
+
+.btn-secondary {
+  border: 2px solid var(--green);
+  color: var(--green);
+  border-radius: 5px;
+}
+.btn-secondary:hover {
+  border: 2px solid var(--green-light);
+  color: var(--green-light);
+}
+
+.btn-large {
+  font-size: var(--sentence-size);
+  padding: 5px 30px;
+}
+/* END COMMON */
 
 /* HEADER */
 .nav {
@@ -83,3 +119,34 @@ body {
 .nav-separator {
   border-left: 1px solid var(--blue-dark);
 }
+/* END HEADER */
+
+/* CONTAINER */
+.container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+/* home */
+.container .welcome {
+  padding: 50px 0;
+  flex-basis: 40%;
+}
+.welcome .actions {
+  margin-top: 50px;
+}
+.welcome .actions a:first-child {
+  margin-right: 20px;
+}
+
+.container .image-home {
+  padding: 50px 0;
+  flex-basis: 30%;
+  text-align: center;
+}
+.image-home img {
+  height: 400px;
+}
+/* end home */
+
+/* END CONTAINER */
