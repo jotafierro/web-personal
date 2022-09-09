@@ -98,7 +98,6 @@ body {
   padding: 0 20%;
   display: flex;
   justify-content: space-evenly;
-  text-justify: center;
   margin: 0 auto;
   margin-top: 30px;
 }
@@ -126,6 +125,7 @@ body {
   margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
+  flex: 1;
 }
 /* home */
 .container .welcome {
@@ -150,3 +150,31 @@ body {
 /* end home */
 
 /* END CONTAINER */
+
+/* FOOTER */
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: end;
+}
+.footer .social-networks {
+  font-size: var(--sentence-size);
+  color: var(--gray);
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+.footer .social-networks i {
+  margin-left: 10px;
+}
+.footer .social-networks i:hover {
+  cursor: pointer;
+  color: var(--green-light);
+}
+
+.footer .wave {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+}
+/* END FOOTER */
