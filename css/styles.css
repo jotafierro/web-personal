@@ -124,10 +124,12 @@ body {
 .container {
   margin-top: 40px;
   display: flex;
-  justify-content: space-evenly;
   flex: 1;
 }
 /* home */
+.home {
+  justify-content: space-evenly;
+}
 .container .welcome {
   padding: 50px 0;
   flex-basis: 40%;
@@ -149,6 +151,21 @@ body {
 }
 /* end home */
 
+/* under-construction */
+.under-construction {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 300px;
+}
+
+.under-construction img {
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+/* end under-construction */
+
 /* END CONTAINER */
 
 /* FOOTER */
@@ -159,15 +176,15 @@ body {
 }
 .footer .social-networks {
   font-size: var(--sentence-size);
-  color: var(--gray);
   margin-right: 50px;
   margin-bottom: 50px;
 }
-.footer .social-networks i {
+.footer .social-networks a {
+  color: var(--gray);
+  text-decoration: none;
   margin-left: 10px;
 }
-.footer .social-networks i:hover {
-  cursor: pointer;
+.footer .social-networks a:hover {
   color: var(--green-light);
 }
 
