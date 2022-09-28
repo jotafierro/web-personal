@@ -4,56 +4,105 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Work</title>
   <link rel="stylesheet" href="../css/styles.css">
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <header>
-    <nav class="nav">
-      <a href="../index.html" class="nav-link">Home</a>
-      <span class="nav-separator"></span>
-      <span class="nav-link selected">Work</span>
-      <span class="nav-separator"></span>
-      <a href="./AboutMe.html" class="nav-link">About me</a>
-      <span class="nav-separator"></span>
-      <a href="./Blog.html" class="nav-link">Blog</a>
-      <span class="nav-separator"></span>
-      <a href="./HireMe.html" class="nav-link">Hire me</a>
+  <header class="header">
+    <!-- header web/tablet -->
+    <nav class="header__nav show-md show-lg">
+      <a href="../index.html" class="header__nav-link">Home</a>
+      <span class="header__nav-separator"></span>
+      <span class="header__nav-link header__nav-link--selected">Work</span>
+      <span class="header__nav-separator"></span>
+      <a href="./AboutMe.html" class="header__nav-link">About me</a>
+      <span class="header__nav-separator"></span>
+      <a href="./Blog.html" class="header__nav-link">Blog</a>
+      <span class="header__nav-separator"></span>
+      <a href="./HireMe.html" class="header__nav-link">Hire me</a>
     </nav>
+    <!-- header mobile -->
+    <div class="header__hamburger pointer show-xs">
+      <i class='bx bx-menu'></i>
+    </div>
   </header>
 
-  <main class="container under-construction">
-    <img src="../img/under_construction.svg" alt="under-construction">
-    <h1 class="title">Under construction</h1>
+  <main class="main__container under-construction">
+    <img src="../images/under_construction.svg" alt="under-construction">
+    <h1 class="title-xs title-md title-lg">Under construction</h1>
   </main>
 
-  <footer>
-    <div class="footer">
-      <section class="social-networks">
-        <a href="https://www.linkedin.com/in/jotafierro/" target="_blank">
-          <i class='bx bxl-linkedin' ></i>
-        </a>
-        <a href="https://medium.com/@jota_fierro" target="_blank">
-          <i class='bx bxl-medium' ></i>
-        </a>
-        <a href="https://github.com/jotafierro" target="_blank">
-          <i class='bx bxl-github' ></i>
-        </a>
-        <a href="https://stackoverflow.com/users/12867948/jota-fierro" target="_blank">
-          <i class='bx bxl-stack-overflow' ></i>
-        </a>
-        <a href="https://www.reddit.com/user/jotafierro" target="_blank">
-          <i class='bx bxl-reddit' ></i>
-        </a>
-        <a href="https://twitter.com/jota_fierro" target="_blank">
-          <i class='bx bxl-twitter' ></i>
-        </a>
-        <a href="https://www.instagram.com/fierrojota/" target="_blank">
-          <i class='bx bxl-instagram' ></i>
-        </a>
-      </section>
-      <img src="../img/wave_footer.svg" alt="wave_footer" class="wave">
+  <footer class="footer">
+    <img
+      class="footer__wave show-xs"
+      src="../images/xs/wave.svg"
+      alt="wave_xs"
+    >
+    <img
+      class="footer__wave show-md"
+      src="../images/md/wave.svg"
+      alt="wave_md"
+    >
+    <img
+      class="footer__wave show-lg"
+      src="../images/lg/wave.svg"
+      alt="wave_lg"
+    >
+    <div class="footer__container">
+      <div class="footer__social-networks-container">
+        <section class="footer__social-networks">
+          <a
+            class="footer__social-networks-link"
+            href="https://www.linkedin.com/in/jotafierro/"
+            target="_blank"
+          >
+            <i class='bx bxl-linkedin' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://medium.com/@jota_fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-medium' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://github.com/jotafierro"
+            target="_blank"
+          >
+            <i class='bx bxl-github' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://stackoverflow.com/users/12867948/jota-fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-stack-overflow' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://www.reddit.com/user/jotafierro"
+            target="_blank"
+          >
+            <i class='bx bxl-reddit' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://twitter.com/jota_fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-twitter' ></i>
+          </a>
+          <a
+            class="footer__social-networks-link"
+            href="https://www.instagram.com/fierrojota/"
+            target="_blank"
+          >
+            <i class='bx bxl-instagram' ></i>
+          </a>
+        </section>
+      </div>
     </div>
   </footer>
 </body>
