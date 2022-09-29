@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;700&family=Poppins:wght@200;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;700');
 
 /* COMMON */
 :root {
@@ -38,7 +38,6 @@
   --font-bold: 700;
 
   --oswald-font: 'Oswald', sans-serif;
-  --poppins-font: 'Poppins', sans-serif;
 }
 
 * {
@@ -124,6 +123,72 @@ body {
 }
 /* end subtitle */
 
+/* start sentence */
+.sentence {
+  color: var(--blue);
+  font-size: var(--font-size-xs-sentence);
+  font-weight: var(--bold);
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  .sentence {
+    font-size: var(--font-size-md-sentence);
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+  .sentence {
+    font-size: var(--font-size-lg-sentence);
+  }
+}
+/* end sentence */
+
+/* start paragraph */
+.paragraph {
+  color: var(--blue);
+  font-size: var(--font-size-xs-paragraph);
+  font-weight: var(--bold);
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: var(--font-size-md-paragraph);
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+  .paragraph {
+    font-size: var(--font-size-lg-paragraph);
+  }
+}
+/* end paragraph */
+
+/* start text */
+.text {
+  color: var(--blue);
+  font-size: var(--font-size-xs-text);
+  font-weight: var(--bold);
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  .text {
+    font-size: var(--font-size-md-text);
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+  .text {
+    font-size: var(--font-size-lg-text);
+  }
+}
+/* end text */
+
 /* start show */
 /* mobile (xs) */
 .show-md {
@@ -186,6 +251,10 @@ body {
   color: var(--green-light);
 }
 
+.btn-medium {
+  font-size: var(--font-size-xs-paragraph);
+}
+
 .btn-large {
   font-size: var(--font-size-xs-sentence);
 }
@@ -194,6 +263,10 @@ body {
 @media (min-width: 768px) {
   .btn {
     font-size: var(--font-size-md-text);
+  }
+
+  .btn-medium {
+    font-size: var(--font-size-md-paragraph);
   }
 
   .btn-large {
@@ -207,11 +280,62 @@ body {
     font-size: var(--font-size-lg-text);
   }
 
+  .btn-medium {
+    font-size: var(--font-size-md-paragraph);
+  }
+
   .btn-large {
     font-size: var(--font-size-lg-sentence);
   }
 }
 /* end btn */
+
+/* start input, textarea, checkbox */
+/* mobile (xs) */
+input, textarea {
+  font-family: var(--oswald-font);
+  text-decoration: none;
+  border: none;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: 5px;
+  padding: 5px;
+  font-size: var(--font-size-xs-text);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--blue);
+  opacity: .5;
+}
+
+textarea {
+  resize: none;
+  height: 200px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1rem;
+  height: 1rem;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--blue);
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  input, textarea {
+    font-size: var(--font-size-md-text);
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+  input, textarea {
+    font-size: var(--font-size-lg-text);
+  }
+}
+/* end input */
 
 /* END COMMON */
 
@@ -428,3 +552,132 @@ body {
   }
 }
 /* ################################## HOME ################################## */
+
+
+/* ################################## WORK ################################## */
+/* mobile (xs) */
+
+/* tablet (md) */
+@media (min-width: 768px) {
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+}
+/* ################################## WORK ################################## */
+
+/* ################################ ABOUT ME ################################ */
+/* mobile (xs) */
+
+/* tablet (md) */
+@media (min-width: 768px) {
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+}
+/* ################################ ABOUT ME ################################ */
+
+/* ################################## BLOG ################################# */
+/* mobile (xs) */
+
+/* tablet (md) */
+@media (min-width: 768px) {
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+}
+/* ################################## BLOG ################################# */
+
+/* ################################ HIRE ME ################################# */
+/* mobile (xs) */
+.hire-me {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue);
+  gap: 20px;
+}
+.hire-me__title {
+  text-align: center;
+}
+.hire-me__message {
+  text-align: justify;
+}
+
+.hire-me__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hire-me__form-subscribe {
+  text-align: center;
+}
+
+.hire-me__form-send {
+  text-align: center;
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  .hire-me__title {
+    text-align: left;
+  }
+
+  .hire-me__message {
+    text-align: center;
+  }
+
+  .hire-me__form {
+    display: grid;
+    grid-template-areas:
+      "form-name form-message"
+      "form-email form-message"
+      "form-number form-message"
+      "form-company form-message"
+      "form-subscribe form-message"
+      "form-send form-send"
+      ;
+  }
+
+  .hire-me__form-name {
+    grid-area: form-name;
+  }
+  .hire-me__form-email {
+    grid-area: form-email;
+  }
+  .hire-me__form-number {
+    grid-area: form-number;
+  }
+  .hire-me__form-company {
+    grid-area: form-company;
+  }
+  .hire-me__form-suscribe {
+    grid-area: form-suscribe;
+  }
+  .hire-me__form-suscribe {
+    grid-area: form-suscribe;
+  }
+
+  .hire-me__form-message {
+    grid-area: form-message;
+    height: 100%;
+  }
+
+  .hire-me__form-send {
+    grid-area: form-send;
+    justify-self: end;
+    width: 200px;
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+}
+/* ################################ HIRE ME ################################# */
+
+
