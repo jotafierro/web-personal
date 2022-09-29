@@ -1,0 +1,87 @@
+/* mobile (xs) */
+.hire-me {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  color: var(--blue);
+  gap: 20px;
+}
+.hire-me__title {
+  text-align: center;
+}
+.hire-me__message {
+  text-align: justify;
+}
+
+.hire-me__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hire-me__form-subscribe {
+  text-align: center;
+}
+
+.hire-me__form-send {
+  text-align: center;
+}
+
+/* tablet (md) */
+@media (min-width: 768px) {
+  .hire-me__title {
+    text-align: left;
+  }
+
+  .hire-me__message {
+    text-align: center;
+  }
+
+  .hire-me__form {
+    display: grid;
+    grid-template-areas:
+      "form-name form-message"
+      "form-email form-message"
+      "form-number form-message"
+      "form-company form-message"
+      "form-subscribe form-message"
+      "form-send form-send"
+      ;
+  }
+
+  .hire-me__form-name {
+    grid-area: form-name;
+  }
+  .hire-me__form-email {
+    grid-area: form-email;
+  }
+  .hire-me__form-number {
+    grid-area: form-number;
+  }
+  .hire-me__form-company {
+    grid-area: form-company;
+  }
+  .hire-me__form-suscribe {
+    grid-area: form-suscribe;
+  }
+  .hire-me__form-suscribe {
+    grid-area: form-suscribe;
+  }
+
+  .hire-me__form-message {
+    grid-area: form-message;
+    height: 100%;
+  }
+
+  .hire-me__form-send {
+    grid-area: form-send;
+    justify-self: end;
+    width: 200px;
+  }
+}
+
+/* web (lg) */
+@media (min-width: 1024px) {
+}
