@@ -31,6 +31,11 @@
     color: var(--blue);
   }
 
+  .header__nav-link:hover {
+    color: var(--green-light);
+    transform: scale(1.2);
+  }
+
   .header__nav-link--selected {
     text-decoration: underline;
     color: var(--green);
@@ -50,9 +55,5 @@
 
   .header__nav-link {
     font-size: var(--font-size-lg-sentence);
-  }
-
-  .header__nav-link:hover {
-    color: var(--green-light);
   }
 }

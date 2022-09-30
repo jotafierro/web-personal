@@ -36,6 +36,10 @@
   color: var(--gray);
   text-decoration: none;
 }
+.footer__social-networks-link:hover {
+  color: var(--green-light);
+  transform: scale(1.2);
+}
 
 /* tablet (md) */
 @media (min-width: 768px) {
