@@ -5,6 +5,7 @@
   margin: 20px auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   color: var(--blue);
   gap: 20px;
 }

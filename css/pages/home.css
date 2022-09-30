@@ -55,6 +55,7 @@
   .home__texts {
     width: 70%;
     margin: 0 auto;
+    align-self: end;
   }
 
   .home__actions {
@@ -83,6 +84,7 @@
   }
 
   .home__actions {
+    align-self: start;
     flex-direction: row;
   }
   .home__actions a:first-child {
