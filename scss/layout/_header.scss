@@ -1,0 +1,55 @@
+.header {
+  margin-top: 20px;
+  width: 100vw;
+  @include flex-props(row, flex-end);
+
+  &__hamburger {
+    color: map-get($colors, blue);
+    font-size: map-get(map-get($text-styles-sizes, title), xs);
+    margin-right: 34px;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: center;
+
+    &__nav {
+      @include flex-props();
+      max-width: 668px;
+      gap: 25px;
+    }
+
+    &__nav-link {
+      text-decoration: none;
+      font-size: map-get(map-get($text-styles-sizes, sentence), mg);
+      color: map-get($colors, blue);
+
+      &:hover {
+        color: map-get($colors, green-light);
+        transform: scale(1.2);
+      }
+
+      &--selected {
+        text-decoration: underline;
+        color: map-get($colors, green);
+      }
+    }
+
+    &__nav-separator {
+      border-left: 1px solid map-get($colors, blue-dark);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__nav {
+      max-width: 723px;
+      gap: 30px;
+    }
+
+    &__nav-link {
+      font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+    }
+  }
+}
+
+
+

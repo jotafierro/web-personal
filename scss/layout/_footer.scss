@@ -1,0 +1,51 @@
+.footer {
+  @include flex-props(column, center);
+
+  &__wave {
+    width: 100%;
+    height: auto;
+    margin-bottom: -1px;
+  }
+
+  &__container {
+    width: 100%;
+    background-color: map-get($colors, blue-dark);
+  }
+
+  &__social-networks-container {
+    margin: 0 20px;
+    @include flex-props(row, flex-end);
+  }
+
+  &__social-networks {
+    font-size: 1.5rem;
+    width: 85px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 5px;
+
+    @media (min-width: 768px) {
+      font-size: 2rem;
+      width: auto;
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__social-networks-link {
+    color: map-get($colors, gray);
+    text-decoration: none;
+
+    &:hover {
+      color: map-get($colors, green-light);
+      transform: scale(1.2);
+    }
+  }
+
+}

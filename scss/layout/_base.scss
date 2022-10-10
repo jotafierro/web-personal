@@ -1,0 +1,14 @@
+body {
+  font-family: $oswald-font;
+  min-height: 100vh;
+  @include flex-props(column);
+}
+
+.main__container {
+  flex: 1;
+}
+
+.pointer {
+  cursor: pointer;
+}
+

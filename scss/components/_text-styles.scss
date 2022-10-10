@@ -1,0 +1,21 @@
+@each $text-style, $sizes in $text-styles-sizes {
+  .#{$text-style} {
+    color: map-get($colors, blue);
+    font-size: map-get($sizes, xs);
+
+    @if ($text-style == text) {
+      font-weight: map-get($font-weight, medium);
+    } @else {
+      font-weight: map-get($font-weight, bold);
+    }
+
+
+    @media (min-width: 768px) {
+      font-size: map-get($sizes, md);
+    }
+
+    @media (min-width: 1024px) {
+      font-size: map-get($sizes, lg);
+    }
+  };
+};

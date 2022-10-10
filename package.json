@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "serve": "node ./node_modules/.bin/live-server",
-    "sass": "node-sass ./scss/styles.scss ./css/styles.css -w",
+    "sass": "node-sass ./scss/*.scss ./css/styles.css -w",
     "dev": "concurrently 'yarn sass' 'yarn serve'"
   },
   "repository": "git@github.com:jotafierro/web-personal.git",

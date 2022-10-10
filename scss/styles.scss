@@ -1,3 +1,21 @@
-* {
-  margin: 0;
-}
+@import "./utilities/mixins";
+@import "./utilities/variables";
+
+@import "./base/fonts";
+@import "./base/reset";
+
+@import "./components/button";
+@import "./components/text-styles";
+@import "./components/form";
+@import "./components/show";
+
+@import "./layout/base";
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/under-construction";
+
+@import "./pages/home";
+@import "./pages/work";
+@import "./pages/about_me";
+@import "./pages/blog";
+@import "./pages/hire_me";
