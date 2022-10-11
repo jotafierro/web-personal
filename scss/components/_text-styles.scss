@@ -4,11 +4,16 @@
     font-size: map-get($sizes, xs);
 
     @if ($text-style == text) {
+      font-weight: map-get($font-weight, regular);
+    } @else if ($text-style == paragraph) {
+      font-weight: map-get($font-weight, regular);
+    } @else if ($text-style == sentence) {
+      font-weight: map-get($font-weight, medium);
+    } @else if ($text-style == subtitle) {
       font-weight: map-get($font-weight, medium);
     } @else {
       font-weight: map-get($font-weight, bold);
     }
-
 
     @media (min-width: 768px) {
       font-size: map-get($sizes, md);

@@ -7,11 +7,19 @@ input, textarea {
   border-radius: 5px;
   padding: 5px;
   font-size: map-get(map-get($text-styles-sizes, text), xs);
-}
 
-input::placeholder, textarea::placeholder {
-  color: map-get($colors, blue);
-  opacity: .5;
+  @media (min-width: 768px) {
+    font-size: map-get(map-get($text-styles-sizes, text), md);
+  }
+
+  @media (min-width: 1024px) {
+    font-size: map-get(map-get($text-styles-sizes, text), lg);
+  }
+
+  &::placeholder {
+    color: map-get($colors, blue);
+    opacity: .5;
+  }
 }
 
 textarea {
@@ -23,19 +31,8 @@ input[type="checkbox"] {
   appearance: none;
   width: 1rem;
   height: 1rem;
-}
-input[type="checkbox"]:checked {
-  background-color: map-get($colors, blue);
-}
 
-@media (min-width: 768px) {
-  input, textarea {
-    font-size: map-get(map-get($text-styles-sizes, text), md);
-  }
-}
-
-@media (min-width: 1024px) {
-  input, textarea {
-    font-size: map-get(map-get($text-styles-sizes, text), lg);
+  &:checked {
+    background-color: map-get($colors, blue);
   }
 }

@@ -4,52 +4,45 @@
   padding: 0;
   box-sizing: border-box; }
 
-/* start btn */
-/* mobile (xs) */
-.btn {
+.button, .button__primary, .button__primary--medium, .button__primary--large, .button__secondary, .button__secondary--medium, .button__secondary--large {
   text-decoration: none;
   font-size: 1rem; }
-
-.btn-primary {
-  border: 2px solid #679436;
-  background-color: #679436;
-  color: #EBF2FA;
-  border-radius: 5px; }
-
-.btn-primary:hover {
-  background-color: #A5BE00; }
-
-.btn-secondary {
-  border: 2px solid #679436;
-  color: #679436;
-  border-radius: 5px; }
-
-.btn-secondary:hover {
-  border: 2px solid #A5BE00;
-  color: #A5BE00; }
-
-.btn-medium {
-  font-size: 1.25rem; }
-
-.btn-large {
-  font-size: 2rem; }
-
-/* tablet (md) */
-@media (min-width: 768px) {
-  .btn {
+  @media (min-width: 768px) {
+    .button, .button__primary, .button__primary--medium, .button__primary--large, .button__secondary, .button__secondary--medium, .button__secondary--large {
+      font-size: 1.25rem; } }
+  @media (min-width: 1024px) {
+    .button, .button__primary, .button__primary--medium, .button__primary--large, .button__secondary, .button__secondary--medium, .button__secondary--large {
+      font-size: 1.5rem; } }
+  .button__primary, .button__primary--medium, .button__primary--large {
+    border: 2px solid #679436;
+    background-color: #679436;
+    color: #EBF2FA;
+    border-radius: 5px; }
+    .button__primary:hover, .button__primary--medium:hover, .button__primary--large:hover {
+      background-color: #A5BE00; }
+  .button__secondary, .button__secondary--medium, .button__secondary--large {
+    border: 2px solid #679436;
+    color: #679436;
+    border-radius: 5px; }
+    .button__secondary:hover, .button__secondary--medium:hover, .button__secondary--large:hover {
+      border: 2px solid #A5BE00;
+      color: #A5BE00; }
+  .button__primary--medium, .button__secondary--medium {
     font-size: 1.25rem; }
-  .btn-medium {
-    font-size: 1.5rem; }
-  .btn-large {
-    font-size: 2.25rem; } }
-
-@media (min-width: 1024px) {
-  .btn {
-    font-size: 1.5rem; }
-  .btn-medium {
-    font-size: 1.5rem; }
-  .btn-large {
-    font-size: 2.5rem; } }
+    @media (min-width: 768px) {
+      .button__primary--medium, .button__secondary--medium {
+        font-size: 1.5rem; } }
+    @media (min-width: 1024px) {
+      .button__primary--medium, .button__secondary--medium {
+        font-size: 2rem; } }
+  .button__primary--large, .button__secondary--large {
+    font-size: 2rem; }
+    @media (min-width: 768px) {
+      .button__primary--large, .button__secondary--large {
+        font-size: 2.25rem; } }
+    @media (min-width: 1024px) {
+      .button__primary--large, .button__secondary--large {
+        font-size: 2.5rem; } }
 
 .title {
   color: #006AB2;
@@ -65,7 +58,7 @@
 .subtitle {
   color: #006AB2;
   font-size: 2.25rem;
-  font-weight: 700; }
+  font-weight: 500; }
   @media (min-width: 768px) {
     .subtitle {
       font-size: 2.5rem; } }
@@ -76,7 +69,7 @@
 .sentence {
   color: #006AB2;
   font-size: 2rem;
-  font-weight: 700; }
+  font-weight: 500; }
   @media (min-width: 768px) {
     .sentence {
       font-size: 2.25rem; } }
@@ -87,7 +80,7 @@
 .paragraph {
   color: #006AB2;
   font-size: 1.25rem;
-  font-weight: 700; }
+  font-weight: 400; }
   @media (min-width: 768px) {
     .paragraph {
       font-size: 1.5rem; } }
@@ -98,7 +91,7 @@
 .text {
   color: #006AB2;
   font-size: 1rem;
-  font-weight: 500; }
+  font-weight: 400; }
   @media (min-width: 768px) {
     .text {
       font-size: 1.25rem; } }
@@ -115,10 +108,15 @@ input, textarea {
   border-radius: 5px;
   padding: 5px;
   font-size: 1rem; }
-
-input::placeholder, textarea::placeholder {
-  color: #006AB2;
-  opacity: .5; }
+  @media (min-width: 768px) {
+    input, textarea {
+      font-size: 1.25rem; } }
+  @media (min-width: 1024px) {
+    input, textarea {
+      font-size: 1.5rem; } }
+  input::placeholder, textarea::placeholder {
+    color: #006AB2;
+    opacity: .5; }
 
 textarea {
   resize: none;
@@ -128,22 +126,10 @@ input[type="checkbox"] {
   appearance: none;
   width: 1rem;
   height: 1rem; }
+  input[type="checkbox"]:checked {
+    background-color: #006AB2; }
 
-input[type="checkbox"]:checked {
-  background-color: #006AB2; }
-
-@media (min-width: 768px) {
-  input, textarea {
-    font-size: 1.25rem; } }
-
-@media (min-width: 1024px) {
-  input, textarea {
-    font-size: 1.5rem; } }
-
-.show-md {
-  display: none; }
-
-.show-lg {
+.show-md, .show-lg {
   display: none; }
 
 @media (min-width: 768px) {

@@ -1,65 +1,79 @@
-/* start btn */
-/* mobile (xs) */
-.btn {
+.button {
   text-decoration: none;
   font-size: map-get(map-get($text-styles-sizes, text), xs);
-}
 
-.btn-primary {
-  border: 2px solid map-get($colors, green);
-  background-color: map-get($colors, green);
-  color: map-get($colors, gray);
-  border-radius: 5px;
-}
-
-.btn-primary:hover {
-  background-color: map-get($colors, green-light);
-}
-
-.btn-secondary {
-  border: 2px solid map-get($colors, green);
-  color: map-get($colors, green);
-  border-radius: 5px;
-}
-
-.btn-secondary:hover {
-  border: 2px solid map-get($colors, green-light);
-  color: map-get($colors, green-light);
-}
-
-.btn-medium {
-  font-size: map-get(map-get($text-styles-sizes, paragraph), xs);
-}
-
-.btn-large {
-  font-size: map-get(map-get($text-styles-sizes, sentence), xs);
-}
-
-/* tablet (md) */
-@media (min-width: 768px) {
-  .btn {
+  @media (min-width: 768px) {
     font-size: map-get(map-get($text-styles-sizes, text), md);
   }
 
-  .btn-medium {
-    font-size: map-get(map-get($text-styles-sizes, paragraph), md);
-  }
-
-  .btn-large {
-    font-size: map-get(map-get($text-styles-sizes, sentence), md);
-  }
-}
-
-@media (min-width: 1024px) {
-  .btn {
+  @media (min-width: 1024px) {
     font-size: map-get(map-get($text-styles-sizes, text), lg);
   }
 
-  .btn-medium {
-    font-size: map-get(map-get($text-styles-sizes, paragraph), md);
+  &__primary {
+    @extend .button;
+    border: 2px solid map-get($colors, green);
+    background-color: map-get($colors, green);
+    color: map-get($colors, gray);
+    border-radius: 5px;
+
+    &:hover {
+      background-color: map-get($colors, green-light);
+    }
+
+    &--medium {
+      @extend .button__primary;
+    }
+
+    &--large {
+      @extend .button__primary;
+    }
   }
 
-  .btn-large {
-    font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+  &__secondary {
+    @extend .button;
+    border: 2px solid map-get($colors, green);
+    color: map-get($colors, green);
+    border-radius: 5px;
+
+    &:hover {
+      border: 2px solid map-get($colors, green-light);
+      color: map-get($colors, green-light);
+    }
+
+    &--medium {
+      @extend .button__secondary;
+    }
+
+    &--large {
+      @extend .button__secondary;
+    }
   }
+
+  &__primary, &__secondary {
+    &--medium {
+      font-size: map-get(map-get($text-styles-sizes, paragraph), xs);
+
+      @media (min-width: 768px) {
+        font-size: map-get(map-get($text-styles-sizes, paragraph), md);
+      }
+
+      @media (min-width: 1024px) {
+        font-size: map-get(map-get($text-styles-sizes, paragraph), lg);
+      }
+    }
+
+    &--large {
+      font-size: map-get(map-get($text-styles-sizes, sentence), xs);
+
+      @media (min-width: 768px) {
+        font-size: map-get(map-get($text-styles-sizes, sentence), md);
+      }
+
+      @media (min-width: 1024px) {
+        font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+      }
+    }
+  }
+
 }
