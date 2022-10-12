@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <!-- recommended by https://favicon.io/favicon-generator/ -->
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../images/favicon/site.webmanifest">
+</head>
+<body>
+  <header class="header">
+    <!-- header web/tablet -->
+    <nav class="header__nav show-md show-lg">
+      <a href="../index.html" class="header__nav-link">Home</a>
+      <span class="header__nav-divider"></span>
+      <span class="header__nav-link--selected">Work</span>
+      <span class="header__nav-divider"></span>
+      <a href="./AboutMe.html" class="header__nav-link">About me</a>
+      <span class="header__nav-divider"></span>
+      <a href="./Blog.html" class="header__nav-link">Blog</a>
+      <span class="header__nav-divider"></span>
+      <a href="./HireMe.html" class="header__nav-link">Hire me</a>
+    </nav>
+    <!-- header mobile -->
+    <div class="header__hamburger pointer">
+      <a href="javascript:void(0);" onclick="toggleMobileNavBar()">
+        <i id="icon__hamburger" class='bx bx-menu'></i>
+      </a>
+    </div>
+    <div id="nav__mobile" class="nav__mobile">
+      <nav class="nav__mobile-container">
+        <a href="../index.html" class="nav__mobile-link">Home</a>
+        <span class="nav__mobile-divider"></span>
+        <span class="nav__mobile-link--selected">Work</span>
+        <span class="nav__mobile-divider"></span>
+        <a href="./AboutMe.html" class="nav__mobile-link">About me</a>
+        <span class="nav__mobile-divider"></span>
+        <a href="./Blog.html" class="nav__mobile-link">Blog</a>
+        <span class="nav__mobile-divider"></span>
+        <a href="./HireMe.html" class="nav__mobile-link">Hire me</a>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="breadcrumb">
+    <a href="./Work.html" class="breadcrumb__nav-link">Projects</a>
+    <span class="breadcrumb__divider"></span>
+    <span class="breadcrumb__name">Project Name</span>
+  </nav>
+
+  <main class="main__container under-construction">
+    <img src="../images/under_construction.svg" alt="under-construction">
+    <h1 class="title">Under construction</h1>
+  </main>
+
+  <footer class="footer">
+    <img
+      class="footer__wave show-xs"
+      src="../images/xs/wave.svg"
+      alt="wave_xs"
+    >
+    <img
+      class="footer__wave show-md"
+      src="../images/md/wave.svg"
+      alt="wave_md"
+    >
+    <img
+      class="footer__wave show-lg"
+      src="../images/lg/wave.svg"
+      alt="wave_lg"
+    >
+    <div class="footer__container">
+      <div class="footer__social-networks-container">
+        <section class="footer__social-network">
+          <a
+            class="footer__social-network-link"
+            href="https://www.linkedin.com/in/jotafierro/"
+            target="_blank"
+          >
+            <i class='bx bxl-linkedin' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://medium.com/@jota_fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-medium' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://github.com/jotafierro"
+            target="_blank"
+          >
+            <i class='bx bxl-github' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://stackoverflow.com/users/12867948/jota-fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-stack-overflow' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://www.reddit.com/user/jotafierro"
+            target="_blank"
+          >
+            <i class='bx bxl-reddit' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://twitter.com/jota_fierro"
+            target="_blank"
+          >
+            <i class='bx bxl-twitter' ></i>
+          </a>
+          <a
+            class="footer__social-network-link"
+            href="https://www.instagram.com/fierrojota/"
+            target="_blank"
+          >
+            <i class='bx bxl-instagram' ></i>
+          </a>
+        </section>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/mobileNavBar.js"></script>
+</body>
+</html>

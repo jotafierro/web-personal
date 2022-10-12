@@ -1,6 +1,8 @@
 .header {
   @include flex-props(column);
   width: 100vw;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__hamburger {
     @include flex-props(row, flex-end);
@@ -11,7 +13,7 @@
 
   @media (min-width: 768px) {
     margin-top: 20px;
-    @include flex-props(row, flex-end);
+    @include flex-props(column, normal, center);
     justify-content: center;
 
     &__hamburger {
@@ -58,6 +60,8 @@
     }
   }
 
+  // nav mobile
+
   #nav__mobile {
     display: none;
 
@@ -100,3 +104,33 @@
 
 
 
+
+
+// breadcrumbs
+.breadcrumb {
+  @include flex-props(row, flex-start);
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 10px;
+
+  &__nav {
+    &-link {
+      text-decoration: none;
+      color: map-get($colors, blue-dark);
+
+      &:hover {
+        color: map-get($colors, green-light);
+      }
+    }
+  }
+
+  &__divider {
+    border-left: 1px solid map-get($colors, blue);
+    transform: rotate(15deg);
+  }
+
+  &__name {
+    color: map-get($colors, blue-light);
+  }
+}
