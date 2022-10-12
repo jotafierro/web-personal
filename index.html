@@ -17,19 +17,34 @@
   <header class="header">
     <!-- header web/tablet -->
     <nav class="header__nav show-md show-lg">
-      <span class="header__nav-link header__nav-link--selected">Home</span>
-      <span class="header__nav-separator"></span>
+      <span class="header__nav-link--selected">Home</span>
+      <span class="header__nav-divider"></span>
       <a href="./pages/Work.html" class="header__nav-link">Work</a>
-      <span class="header__nav-separator"></span>
+      <span class="header__nav-divider"></span>
       <a href="./pages/AboutMe.html" class="header__nav-link">About me</a>
-      <span class="header__nav-separator"></span>
+      <span class="header__nav-divider"></span>
       <a href="./pages/Blog.html" class="header__nav-link">Blog</a>
-      <span class="header__nav-separator"></span>
+      <span class="header__nav-divider"></span>
       <a href="./pages/HireMe.html" class="header__nav-link">Hire me</a>
     </nav>
     <!-- header mobile -->
-    <div class="header__hamburger pointer show-xs">
-      <i class='bx bx-menu'></i>
+    <div class="header__hamburger pointer">
+      <a href="javascript:void(0);" onclick="toggleMobileNavBar()">
+        <i id="icon__hamburger" class='bx bx-menu'></i>
+      </a>
+    </div>
+    <div id="nav__mobile" class="nav__mobile">
+      <nav class="nav__mobile-container">
+        <span class="nav__mobile-link--selected">Home</span>
+        <span class="nav__mobile-divider"></span>
+        <a href="./pages/Work.html" class="nav__mobile-link">Work</a>
+        <span class="nav__mobile-divider"></span>
+        <a href="./pages/AboutMe.html" class="nav__mobile-link">About me</a>
+        <span class="nav__mobile-divider"></span>
+        <a href="./pages/Blog.html" class="nav__mobile-link">Blog</a>
+        <span class="nav__mobile-divider"></span>
+        <a href="./pages/HireMe.html" class="nav__mobile-link">Hire me</a>
+      </nav>
     </div>
   </header>
 
@@ -130,5 +145,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="./scripts/mobileNavBar.js"></script>
 </body>
 </html>

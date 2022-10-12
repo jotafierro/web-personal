@@ -1,16 +1,22 @@
 .header {
-  margin-top: 20px;
+  @include flex-props(column);
   width: 100vw;
-  @include flex-props(row, flex-end);
 
   &__hamburger {
+    @include flex-props(row, flex-end);
     color: map-get($colors, blue);
     font-size: map-get(map-get($text-styles-sizes, title), xs);
-    margin-right: 34px;
+    margin-right: 20px;
   }
 
   @media (min-width: 768px) {
+    margin-top: 20px;
+    @include flex-props(row, flex-end);
     justify-content: center;
+
+    &__hamburger {
+      display: none;
+    }
 
     &__nav {
       @include flex-props();
@@ -28,13 +34,14 @@
         }
 
         &--selected {
+          @extend .header__nav-link;
           text-decoration: underline;
           color: map-get($colors, green);
           pointer-events: none;
         }
       }
 
-      &-separator {
+      &-divider {
         border-left: 1px solid map-get($colors, blue-dark);
       }
     }
@@ -47,6 +54,45 @@
 
       &-link {
         font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+      }
+    }
+  }
+
+  #nav__mobile {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  .nav__mobile {
+    @include flex-props(column);
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+
+    &-container {
+      @include flex-props(column);
+      gap: 10px;
+      max-width: 80%;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    &-divider {
+      border-top: 1px solid map-get($colors, blue);
+    }
+
+    &-link {
+      text-decoration: none;
+      font-size: map-get(map-get($text-styles-sizes, sentence), mg);
+      color: map-get($colors, blue);
+
+      &--selected {
+        @extend .nav__mobile-link;
+        text-decoration: underline;
+        color: map-get($colors, green);
+        pointer-events: none;
       }
     }
   }

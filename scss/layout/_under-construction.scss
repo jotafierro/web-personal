@@ -1,6 +1,7 @@
 .under-construction {
-  margin-top: 20px;
   @include flex-props(column, center);
+  max-width: 80%;
+  margin: 20px auto;
   gap: 20px;
   text-align: center;
 
