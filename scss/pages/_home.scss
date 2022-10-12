@@ -27,17 +27,18 @@
     grid-area: home__image;
     margin: 20px 0;
     text-align: center;
-  }
-  &__image img {
-    width: 70%;
-    @include img-animation() {
-      0% {
-        transform: scale(1);
-      }
-      100% {
-        transform: scale(1.1);
-      }
-    };
+
+    img {
+      width: 70%;
+      @include img-animation() {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      };
+    }
   }
 
   @media (min-width: 768px) {

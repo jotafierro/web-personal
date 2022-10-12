@@ -16,27 +16,27 @@
       @include flex-props();
       max-width: 668px;
       gap: 25px;
-    }
 
-    &__nav-link {
-      text-decoration: none;
-      font-size: map-get(map-get($text-styles-sizes, sentence), mg);
-      color: map-get($colors, blue);
+      &-link {
+        text-decoration: none;
+        font-size: map-get(map-get($text-styles-sizes, sentence), mg);
+        color: map-get($colors, blue);
 
-      &:hover {
-        color: map-get($colors, green-light);
-        transform: scale(1.2);
+        &:hover {
+          color: map-get($colors, green-light);
+          transform: scale(1.2);
+        }
+
+        &--selected {
+          text-decoration: underline;
+          color: map-get($colors, green);
+          pointer-events: none;
+        }
       }
 
-      &--selected {
-        text-decoration: underline;
-        color: map-get($colors, green);
-        pointer-events: none;
+      &-separator {
+        border-left: 1px solid map-get($colors, blue-dark);
       }
-    }
-
-    &__nav-separator {
-      border-left: 1px solid map-get($colors, blue-dark);
     }
   }
 
@@ -44,10 +44,10 @@
     &__nav {
       max-width: 723px;
       gap: 30px;
-    }
 
-    &__nav-link {
-      font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+      &-link {
+        font-size: map-get(map-get($text-styles-sizes, sentence), lg);
+      }
     }
   }
 }

@@ -3,7 +3,6 @@
   width: 80%;
   max-width: 1200px;
   margin: 20px auto;
-  color: map-get($colors, blue);
   gap: 20px;
 
   &__title {
@@ -17,14 +16,14 @@
   &__form {
     @include flex-props(column);
     gap: 20px;
-  }
 
-  &__form-subscribe {
-    text-align: center;
-  }
+    &-subscribe {
+      text-align: center;
+    }
 
-  &__form-send {
-    text-align: center;
+    &-send {
+      text-align: center;
+    }
   }
 
   @media (min-width: 768px) {
@@ -45,37 +44,38 @@
         "form-company form-message"
         "form-subscribe form-message"
         "form-send form-send";
+
+      &-name {
+        grid-area: form-name;
+      }
+      &-email {
+        grid-area: form-email;
+      }
+      &-number {
+        grid-area: form-number;
+      }
+      &-company {
+        grid-area: form-company;
+      }
+      &-suscribe {
+        grid-area: form-suscribe;
+      }
+      &-suscribe {
+        grid-area: form-suscribe;
+      }
+
+      &-message {
+        grid-area: form-message;
+        height: 100%;
+      }
+
+      &-send {
+        grid-area: form-send;
+        justify-self: end;
+        width: 200px;
+      }
     }
 
-    &__form-name {
-      grid-area: form-name;
-    }
-    &__form-email {
-      grid-area: form-email;
-    }
-    &__form-number {
-      grid-area: form-number;
-    }
-    &__form-company {
-      grid-area: form-company;
-    }
-    &__form-suscribe {
-      grid-area: form-suscribe;
-    }
-    &__form-suscribe {
-      grid-area: form-suscribe;
-    }
-
-    &__form-message {
-      grid-area: form-message;
-      height: 100%;
-    }
-
-    &__form-send {
-      grid-area: form-send;
-      justify-self: end;
-      width: 200px;
-    }
   }
 
   @media (min-width: 1024px) {

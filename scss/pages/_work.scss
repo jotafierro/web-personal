@@ -1,9 +1,31 @@
-/* mobile (xs) */
+.work {
+  @include flex-props(column);
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 20px;
 
-/* tablet (md) */
-@media (min-width: 768px) {
-}
+  &__projects {
+    @include flex-props(column);
+    gap: 20px;
 
-/* web (lg) */
-@media (min-width: 1024px) {
+    &-load-more {
+      display: flex;
+      justify-content: center;
+
+      a {
+        padding: 5px 30px;
+      }
+    }
+  }
+
+  &__divider {
+    border-top: 1px solid map-get($colors, blue);
+  }
+
+
+  &__references {
+    @include flex-props(column);
+    gap: 20px;
+  }
 }
