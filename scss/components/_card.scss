@@ -1,8 +1,16 @@
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  &-flex-row {
+    @include flex-props();
+    gap: 10px;
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
 }
+
 
 .card {
   @include flex-props(column);
@@ -10,108 +18,134 @@
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-  // project card
-  &__img {
-    overflow: hidden;
-    border-radius: 5px 5px 0 0;
-
-    img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-    }
-  }
-
-  &__texts {
-    width: 90%;
-    margin: 10px auto;
-    text-align: justify;
-  }
-
-  &__title {
-    color: map-get($colors, blue);
-    margin-bottom: 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  &__paragraph {
-    color: map-get($colors, blue-light);
-  }
-
-  &__action {
-    width: 90%;
-    margin: 10px auto;
-    margin-top: auto; // hack para mantener el read more abajo del card aunque los textos de los cards sean diferentes
-
-    a {
-      color: map-get($colors, blue);
-      text-decoration: none;
-      font-weight: map-get($font-weight, bold);
-
-      &:hover {
-        color: map-get($colors, green-light)
-      }
-    }
-  }
-
-  // reference card
-  &__person {
-    @include flex-props(column);
-    width: 90%;
-    margin: 10px auto;
-    color: map-get($colors, blue);
-
-    &-name {
-      font-weight: map-get($font-weight, medium);
-      font-size: 1.25rem;
-    }
-
-    &-job {
-      font-style: italic;
-    }
-  }
-
-  &__actions {
-    @include flex-props(row);
-    width: 90%;
-    margin: 0 auto 10px auto;
-    gap: 10px;
-
-    a {
-      text-align: center;
-      &:first-child {
-        flex: 1;
-      }
-      &:nth-child(2) {
-        padding: 0 5px;
-        color: map-get($colors, blue-dark);
-        border-color: map-get($colors, blue-dark);
-
-        &:hover {
-          color: map-get($colors, blue-light);
-          border-color: map-get($colors, blue-light);
-        }
-      }
-    }
-  }
-
-  // action card
-  &--action {
+  &-project {
     @extend .card;
-    gap: 0;
+
+    &:hover {
+      a, p, h2 {
+        color: map-get($colors, green)
+      }
+    }
+
+    // project card
+    &__img {
+      overflow: hidden;
+      border-radius: 5px 5px 0 0;
+
+      img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+      }
+    }
+
+    &__texts {
+      width: 90%;
+      margin: 10px auto;
+      text-align: justify;
+    }
+
+    &__title {
+      color: map-get($colors, blue);
+      margin-bottom: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &__paragraph {
+      color: map-get($colors, blue-light);
+    }
+
+    &__action {
+      width: 90%;
+      margin: 10px auto;
+      margin-top: auto; // hack para mantener el read more abajo del card aunque los textos de los cards sean diferentes
+
+      a {
+        color: map-get($colors, blue);
+        text-decoration: none;
+        font-weight: map-get($font-weight, bold);
+      }
+    }
+  }
+
+  &-reference {
+    @extend .card;
+
+    &__person {
+      @include flex-props(column);
+      width: 90%;
+      margin: 10px auto;
+      color: map-get($colors, blue);
+
+      &-name {
+        font-weight: map-get($font-weight, medium);
+        font-size: 1.25rem;
+      }
+
+      &-job {
+        font-style: italic;
+      }
+    }
+
+    &__actions {
+      @include flex-props(row);
+      width: 90%;
+      margin: 0 auto 10px auto;
+      gap: 10px;
+
+      a {
+        text-align: center;
+
+        &:first-child {
+          flex: 1;
+        }
+
+        &:nth-child(2) {
+          padding: 0 5px;
+          color: map-get($colors, blue-dark);
+          border-color: map-get($colors, blue-dark);
+
+          &:hover {
+            color: map-get($colors, blue-light);
+            border-color: map-get($colors, blue-light);
+          }
+        }
+
+      }
+    }
+  }
+
+  &-action {
+    @extend .card;
     @include flex-props(column, center, center);
     color: map-get($colors, green);
+    gap: 0;
 
     &:hover {
       color: map-get($colors, green-light);
     }
-  }
 
-  &__icon {
-    padding-top: 20px;
-    i {
+    &__icon {
+      padding-top: 20px;
+
+      i {
+        font-size: map-get(map-get($text-styles-sizes, paragraph), xs);
+
+        @media (min-width: 768px) {
+          font-size: map-get(map-get($text-styles-sizes, paragraph), md);
+        }
+
+        @media (min-width: 1024px) {
+          font-size: map-get(map-get($text-styles-sizes, paragraph), lg);
+        }
+      }
+
+    }
+
+    &__message {
+      padding-bottom: 20px;
       font-size: map-get(map-get($text-styles-sizes, paragraph), xs);
 
       @media (min-width: 768px) {
@@ -124,16 +158,46 @@
     }
   }
 
-  &__message {
-    padding-bottom: 20px;
-    font-size: map-get(map-get($text-styles-sizes, paragraph), xs);
+  &-post {
+    @extend .card;
+    @include flex-props(row, normal, center);
+    color: map-get($colors, blue-light);
+    overflow: hidden;
 
-    @media (min-width: 768px) {
-      font-size: map-get(map-get($text-styles-sizes, paragraph), md);
+    &:hover {
+      color: map-get($colors, green);
     }
 
-    @media (min-width: 1024px) {
-      font-size: map-get(map-get($text-styles-sizes, paragraph), lg);
+    &__texts {
+      padding: 5px 10px;
+      flex-basis: 80%;
+      @include flex-props(column);
+      gap: 10px
+    }
+
+    &__info {
+      @include flex-props(row);
+      gap: 5px;
+      font-size: 0.8rem;
+
+      &-day {
+        font-weight: map-get($font-weight, medium);
+      }
+
+      &-reading-time {
+        font-style: italic;
+      }
+    }
+
+    &__img {
+      flex-basis: 20%;
+      height: 180px;
+
+      img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
     }
   }
 }

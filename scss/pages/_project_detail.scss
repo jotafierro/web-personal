@@ -4,8 +4,8 @@
 
   &__texts {
     @include flex-props(column);
-    gap: 20px;
     flex-basis: 60%;
+    gap: 20px;
 
     .text {
       text-align: justify;
