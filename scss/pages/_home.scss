@@ -1,4 +1,3 @@
-/* mobile (xs) */
 .home {
   display: grid;
   grid-template-areas:
@@ -7,87 +6,84 @@
     "home__actions";
   margin: 15px;
   gap: 15px;
-}
 
-.home__texts {
-  grid-area: home__texts;
-}
-
-.home__actions {
-  grid-area: home__actions;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 20px 0;
-}
-.home__actions a {
-  width: 100%;
-  text-align: center;
-}
-
-.home__image {
-  grid-area: home__image;
-  margin: 20px 0;
-  text-align: center;
-}
-.home__image img {
-  width: 70%;
-  animation: imgHomeAnimation ease-in 1s infinite alternate;
-}
-
-@keyframes imgHomeAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.06);
-  }
-}
-
-/* tablet (md) */
-@media (min-width: 768px) {
-  .home {
-    grid-template-areas:
-    "home__texts home__texts"
-    "home__actions home__image";
+  &__texts {
+    grid-area: home__texts;
   }
 
-  .home__texts {
+  &__actions {
+    grid-area: home__actions;
+    @include flex-props(column);
+    gap: 20px;
+    margin: 20px 0;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    grid-area: home__image;
+    margin: 20px 0;
+    text-align: center;
+  }
+  &__image img {
     width: 70%;
-    margin: 0 auto;
-    align-self: end;
+    @include img-animation() {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+    };
   }
 
-  .home__actions {
-    align-self: center;
-  }
-
-  .home__image img {
-    width: 80%;
-  }
-}
-
-/* web (lg) */
-@media (min-width: 1024px) {
-  .home {
+  @media (min-width: 768px) {
     grid-template-areas:
-    "home__texts home__image"
-    "home__actions home__image";
+      "home__texts home__texts"
+      "home__actions home__image";
+
+    &__texts {
+      width: 70%;
+      margin: 0 auto;
+      align-self: end;
+    }
+
+    &__actions {
+      align-self: center;
+    }
+
+    &__image {
+      img {
+        width: 80%;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-areas:
+      "home__texts home__image"
+      "home__actions home__image";
     margin: 20px auto;
+
+    &__texts {
+      width: 100%;
+    }
+    &__image {
+      align-self: center;
+    }
+
+    &__actions {
+      align-self: start;
+      flex-direction: row;
+      a {
+        &:first-child {
+          width: 40%;
+        }
+      }
+    }
   }
 
-  .home__texts {
-    width: 100%;
-  }
-  .home__image {
-    align-self: center;
-  }
-
-  .home__actions {
-    align-self: start;
-    flex-direction: row;
-  }
-  .home__actions a:first-child {
-    width: 40%;
-  }
 }

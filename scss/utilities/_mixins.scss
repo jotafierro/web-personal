@@ -4,3 +4,17 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin img-animation($timing: ease-in, $duration: 1s, $iteration: infinite, $direction: alternate) {
+  $name: img-animation-#{unique-id()};
+
+  @keyframes #{$name} {
+    @content;
+  }
+
+  animation-name: $name;
+  animation-timing-function: $timing;
+  animation-duration: $duration;
+  animation-iteration-count: $iteration;
+  animation-direction: $direction;
+}
