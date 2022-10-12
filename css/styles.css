@@ -256,7 +256,10 @@ body {
   align-items: normal; }
 
 .main__container {
-  flex: 1; }
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto; }
 
 .pointer {
   cursor: pointer; }
@@ -274,9 +277,10 @@ body {
     flex-direction: row;
     justify-content: flex-end;
     align-items: normal;
-    color: #006AB2;
     font-size: 2.5rem;
     margin-right: 20px; }
+    .header__hamburger a {
+      color: #006AB2; }
   @media (min-width: 768px) {
     .header {
       margin-top: 20px;
@@ -361,7 +365,7 @@ body {
     border-left: 1px solid #006AB2;
     transform: rotate(15deg); }
   .breadcrumb__name {
-    color: #427AA1; }
+    color: #A5BE00; }
 
 .footer {
   display: flex;
@@ -422,7 +426,6 @@ body {
 .home {
   display: grid;
   grid-template-areas: "home__image" "home__texts" "home__actions";
-  margin: 15px;
   gap: 15px; }
   .home__texts {
     grid-area: home__texts; }
@@ -443,13 +446,13 @@ body {
     text-align: center; }
     .home__image img {
       width: 70%;
-      animation-name: img-animation-u680e8db9;
+      animation-name: img-animation-u5c7e1c5a;
       animation-timing-function: ease-in;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate; }
 
-@keyframes img-animation-u680e8db9 {
+@keyframes img-animation-u5c7e1c5a {
   0% {
     transform: scale(1); }
   100% {
@@ -484,9 +487,6 @@ body {
   flex-direction: column;
   justify-content: normal;
   align-items: normal;
-  width: 80%;
-  max-width: 1200px;
-  margin: 20px auto;
   gap: 20px; }
   .work__projects {
     display: flex;
@@ -508,35 +508,64 @@ body {
     align-items: normal;
     gap: 20px; }
 
-.about-me {
+.project-detail {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: normal;
   align-items: normal;
-  margin: 15px;
   gap: 20px; }
-  .about-me__texts {
-    width: 90%;
+  .project-detail__texts {
     display: flex;
     flex-direction: column;
     justify-content: normal;
     align-items: normal;
     gap: 20px;
+    flex-basis: 60%; }
+    .project-detail__texts .text {
+      text-align: justify; }
+    .project-detail__texts h1 {
+      line-height: 1;
+      margin-bottom: 20px; }
+  .project-detail__images {
+    flex-basis: 40%; }
+    .project-detail__images img {
+      max-width: 100%; }
+  @media (min-width: 768px) {
+    .project-detail {
+      display: flex;
+      flex-direction: row;
+      justify-content: normal;
+      align-items: center; } }
+
+.about-me {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: normal;
+  align-items: normal;
+  gap: 20px; }
+  .about-me__texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    flex-basis: 60%;
+    gap: 20px;
     margin: 0 auto; }
     .about-me__texts ul {
       margin-left: 30px; }
   .about-me__image {
+    flex-basis: 40%;
     text-align: center; }
     .about-me__image img {
-      max-width: 350px;
-      width: 70%;
-      animation-name: img-animation-u40ff635c;
+      max-width: 450px;
+      width: 90%;
+      animation-name: img-animation-ud39cf35f;
       animation-timing-function: ease-in;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate; }
 
-@keyframes img-animation-u40ff635c {
+@keyframes img-animation-ud39cf35f {
   0% {
     transform: scale(1); }
   100% {
@@ -546,21 +575,14 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: normal;
-      align-items: center;
-      max-width: 1024px;
-      padding: 0 20px;
-      margin: 0 auto; }
+      align-items: center; }
       .about-me__texts {
         max-width: 650px; }
-      .about-me__image img {
-        width: 100%; } }
+      .about-me__image {
+        padding: 20px 0; } }
   @media (min-width: 1024px) {
-    .about-me {
-      max-width: 1400px; }
-      .about-me__texts {
-        max-width: 850px; }
-      .about-me__image img {
-        width: 100%; } }
+    .about-me__texts {
+      max-width: 850px; } }
 
 /* mobile (xs) */
 /* tablet (md) */
@@ -570,9 +592,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: normal;
-  width: 80%;
-  max-width: 1200px;
-  margin: 20px auto;
   gap: 20px; }
   .hire-me__title {
     text-align: center; }

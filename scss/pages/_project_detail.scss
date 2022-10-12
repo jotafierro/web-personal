@@ -1,0 +1,31 @@
+.project-detail {
+  @include flex-props(column);
+  gap: 20px;
+
+  &__texts {
+    @include flex-props(column);
+    gap: 20px;
+    flex-basis: 60%;
+
+    .text {
+      text-align: justify;
+    }
+
+    h1 {
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__images {
+    flex-basis: 40%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    @include flex-props(row, normal, center);
+  }
+}
