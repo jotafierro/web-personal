@@ -1,5 +1,4 @@
 .footer {
-  // TODO: maxi recomienda ordenarlo de otra manera en mobile
   @include flex-props(column, center);
 
   &__wave {
@@ -14,17 +13,17 @@
   }
 
   &__social-networks-container {
-    margin: 0 20px;
-    @include flex-props(row, flex-end);
+    margin: 20px auto;
+    @include flex-props(row, center);
+
+    @media (min-width: 768px) {
+      margin: 0 20px;
+      @include flex-props(row, flex-end);
+    }
   }
 
   &__social-network {
     font-size: 1.5rem;
-    width: 85px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 5px;
 
     @media (min-width: 768px) {
       font-size: 2rem;

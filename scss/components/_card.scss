@@ -11,7 +11,6 @@
   }
 }
 
-
 .card {
   @include flex-props(column);
   width: 100%;
@@ -160,7 +159,7 @@
 
   &-post {
     @extend .card;
-    @include flex-props(row, normal, center);
+    @include flex-props(column, normal, center);
     color: map-get($colors, blue-light);
     overflow: hidden;
 
@@ -172,20 +171,20 @@
       padding: 5px 10px;
       flex-basis: 80%;
       @include flex-props(column);
-      gap: 10px
-    }
+      gap: 10px;
 
-    &__info {
-      @include flex-props(row);
-      gap: 5px;
-      font-size: 0.8rem;
+      &-info {
+        @include flex-props(row);
+        gap: 5px;
+        font-size: 0.8rem;
 
-      &-day {
-        font-weight: map-get($font-weight, medium);
-      }
+        &-day {
+          font-weight: map-get($font-weight, medium);
+        }
 
-      &-reading-time {
-        font-style: italic;
+        &-reading-time {
+          font-style: italic;
+        }
       }
     }
 
@@ -198,6 +197,10 @@
         height: 180px;
         object-fit: cover;
       }
+    }
+
+    @media (min-width: 768px) {
+      @include flex-props(row, normal, center);
     }
   }
 }
