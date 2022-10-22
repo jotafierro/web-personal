@@ -474,13 +474,13 @@ body {
     text-align: center; }
     .home__image img {
       width: 70%;
-      animation-name: img-animation-u6a12ba06;
+      animation-name: img-animation-u2071655c;
       animation-timing-function: ease-in;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate; }
 
-@keyframes img-animation-u6a12ba06 {
+@keyframes img-animation-u2071655c {
   0% {
     transform: scale(1); }
   100% {
@@ -585,13 +585,13 @@ body {
     text-align: center; }
     .about-me__image img {
       max-width: 90%;
-      animation-name: img-animation-u83927b1d;
+      animation-name: img-animation-u37ba5986;
       animation-timing-function: ease-in;
       animation-duration: 1s;
       animation-iteration-count: infinite;
       animation-direction: alternate; }
 
-@keyframes img-animation-u83927b1d {
+@keyframes img-animation-u37ba5986 {
   0% {
     transform: scale(1); }
   100% {

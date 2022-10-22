@@ -1,4 +1,5 @@
 .footer {
+  // TODO: maxi recomienda ordenarlo de otra manera en mobile
   @include flex-props(column, center);
 
   &__wave {
